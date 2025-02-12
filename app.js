@@ -25,8 +25,12 @@ const app = new App({
     "리마인더: :pikmin_happy:월요일부터 시작되는 100,000보 걷기 챌린지 참여하실 분께선 스레드 댓글로 남겨주세요. 랜덤 매칭한 결과는 월요일 아침에 발표됩니다.:pikmin_run:";
   await findMessageInfo(app, CHANNER_ID, WALK_TEXT);
 
-  console.log("10초 후 프로그램 종료...");
+  const FLOWER_TEXT =
+    "리마인더 “:pikmin_gogo:월요일부터 시작되는 30,000송이 심기 챌린지 참여하실 분께선 스레드 댓글로 남겨주세요. 랜덤 매칭한 결과는 월요일 아침에 발표됩니다.:bouquet:";
+  await findMessageInfo(app, CHANNER_ID, FLOWER_TEXT);
+
+  console.log("5초 후 프로그램 종료...");
   setTimeout(() => {
     process.exit(0);
-  }, 10000);
+  }, 5000);
 })();

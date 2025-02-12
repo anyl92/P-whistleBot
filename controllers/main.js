@@ -1,26 +1,4 @@
-const handleRandomMatching = (replyUsersCount, replyUsers) => {
-  replyUsers = [1, 2, 3, 4, 5, 6, 77, 8, 9, 10, 11, 12, 13];
-  replyUsersCount = 13;
-  // console.log(replyUsers);
-  // TODO: 유저 순서 랜덤 처리
-  const teamCount = Math.floor(replyUsersCount % 5);
-  const result = Array.from(Array(teamCount), () => Array(5));
-
-  let i = 0;
-  let j = 0;
-  replyUsers.map((user) => {
-    if (i === teamCount) {
-      i = 0;
-      j++;
-    }
-
-    result[i][j] = user;
-    i++;
-  });
-  return result.map((team, idx) => {
-    return `${idx + 1}조: ${team.join(" ")}`;
-  });
-};
+import { makeTeams } from "../helpers/makeTeams.js";
 
 async function findChannelId(app, name) {
   const conversationsList = await app.client.conversations.list({
@@ -52,24 +30,23 @@ async function findMessageInfo(app, channelID, text) {
       const messageTS = message.ts;
       const replyUsersCount = message.reply_users_count;
       const replyUsers = message.reply_users;
-      // console.log(replyUsers, "reply");
 
       // 조편성
-      const teamResult = handleRandomMatching(replyUsersCount, replyUsers);
-      await replyMessage(app, channelID, messageTS, teamResult);
+      const teamResult = makeTeams(replyUsersCount, replyUsers);
+
+      const type = message.text.includes("송이 심기") ? "flower" : "work";
+      await replyMessage(app, channelID, messageTS, teamResult, type);
 
       return messageTS;
     }
   }
 }
 
-async function replyMessage(app, channelID, messageTS, teamResult) {
+async function replyMessage(app, channelID, messageTS, teamResult, type) {
   try {
-    // TODO: 1조 앞 들여쓰기 들어감, 유저로 멘션하고 피크민아이디 입력해줘야함
-    const resultText = `
-    조원 편성 결과는 다음과 같습니다
-    ${teamResult.join("\n")}
-    `;
+    // TODO: 피크민아이디 입력해줘야함
+    const customText = type === "flower" ? "30,000송이 심기" : "100,000보 걷기";
+    const resultText = `즐거운 월요일 아침이에요! 이번 주 ${customText} 챌린지 조 편성 결과입니다:relaxed: \n${teamResult.join("\n")}`;
     console.log(resultText);
 
     const result = await app.client.chat.postMessage({
