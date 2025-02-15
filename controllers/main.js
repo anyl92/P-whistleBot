@@ -31,7 +31,7 @@ async function findMessageInfo(app, channelID, text) {
       const replyUsersCount = message.reply_users_count;
       const replyUsers = message.reply_users;
 
-      // 조편성
+      // 조 편성
       const teamResult = makeTeams(replyUsersCount, replyUsers);
 
       const type = message.text.includes("송이 심기") ? "flower" : "work";
@@ -44,10 +44,8 @@ async function findMessageInfo(app, channelID, text) {
 
 async function replyMessage(app, channelID, messageTS, teamResult, type) {
   try {
-    // TODO: 피크민아이디 입력해줘야함
     const customText = type === "flower" ? "30,000송이 심기" : "100,000보 걷기";
     const resultText = `즐거운 월요일 아침이에요! 이번 주 ${customText} 챌린지 조 편성 결과입니다:relaxed: \n${teamResult.join("\n")}`;
-    console.log(resultText);
 
     const result = await app.client.chat.postMessage({
       token: process.env.SLACK_BOT_TOKEN,
@@ -55,7 +53,7 @@ async function replyMessage(app, channelID, messageTS, teamResult, type) {
       thread_ts: messageTS,
       text: resultText,
     });
-    console.log("조원 편성 결과 스레드가 작성되었습니다.");
+    app.logger.info(`${type} 조원 편성 결과 스레드가 작성되었습니다.`);
   } catch (error) {
     console.error(error);
   }
