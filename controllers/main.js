@@ -31,9 +31,10 @@ async function findMessageInfo(app, channelID, text) {
       const messageTS = message.ts;
       const replyUsersCount = message.reply_users_count;
       const replyUsers = message.reply_users;
+      const type = message.text.includes("송이 심기") ? "flower" : "walk";
 
       // 조 편성
-      const finalTeams = await makeTeams(replyUsersCount, replyUsers);
+      const finalTeams = await makeTeams(replyUsersCount, replyUsers, type);
 
       const leaders = [];
       const resultText = finalTeams.map((team, idx) => {
@@ -48,10 +49,8 @@ async function findMessageInfo(app, channelID, text) {
         return `${idx + 1}조: ${teamText.join("")}`;
       });
 
-      const type = message.text.includes("송이 심기") ? "flower" : "work";
       await replyMessage(app, channelID, messageTS, resultText, type);
-
-      await updateParticipant(replyUsers, leaders);
+      await updateParticipant(replyUsers, type);
 
       return messageTS;
     }

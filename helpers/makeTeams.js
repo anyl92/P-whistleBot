@@ -9,13 +9,14 @@ const getRandomUsers = (users, max) => {
   return users;
 };
 
-const drawLeader = async (team) => {
+const drawLeader = async (team, type) => {
   const data = await readJSONFile();
 
   const memberInfo = team.map((member) => {
-    const { messages, replies, challengeHistory, pastLeader } = data.users[member];
-    const score = messages + replies + challengeHistory;
+    const { messages, replies, flowerChallengeHistory, walkChallengeHistory } = data.users[member];
+    const challengeHistory = type === "flower" ? flowerChallengeHistory : walkChallengeHistory;
 
+    const score = messages + replies + challengeHistory;
     return [score, member];
   });
 
@@ -40,7 +41,7 @@ const drawLeader = async (team) => {
   return result;
 };
 
-export const makeTeams = async (replyUsersCount, replyUsers) => {
+export const makeTeams = async (replyUsersCount, replyUsers, type) => {
   const randomReplyUsers = getRandomUsers(replyUsers, replyUsersCount - 1);
 
   const teamCount = Math.ceil(replyUsersCount / MAX_PEOPLE);
@@ -57,6 +58,6 @@ export const makeTeams = async (replyUsersCount, replyUsers) => {
     teamMembers[i][j] = user;
     i++;
   });
-  const finalTeams = await Promise.all(teamMembers.map((team) => drawLeader(team)));
+  const finalTeams = await Promise.all(teamMembers.map((team) => drawLeader(team, type)));
   return finalTeams;
 };

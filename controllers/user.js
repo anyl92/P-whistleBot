@@ -15,8 +15,8 @@ const updateActivity = async (prevData, conversationHistories) => {
         enteredAt: message.ts,
         messages: 1,
         replies: 0,
-        challengeHistory: 0,
-        pastLeader: false,
+        walkChallengeHistory: 0,
+        flowerChallengeHistory: 0,
       };
     }
 
@@ -31,8 +31,8 @@ const updateActivity = async (prevData, conversationHistories) => {
             enteredAt: message.ts,
             messages: 0,
             replies: 1,
-            challengeHistory: 0,
-            pastLeader: false,
+            walkChallengeHistory: 0,
+            flowerChallengeHistory: 0,
           };
         }
       });
@@ -42,10 +42,14 @@ const updateActivity = async (prevData, conversationHistories) => {
 };
 
 const updateHistory = async (users) => {
-  // 제일 과거의 참여이력을 빼주는 작업
+  // 과거 참여이력을 빼주는 작업
   for (const user in users) {
-    if (users[user]["challengeHistory"] > 0) {
-      users[user]["challengeHistory"] -= 1;
+    if (users[user]["flowerChallengeHistory"] > 1) {
+      users[user]["flowerChallengeHistory"] -= 1;
+    }
+
+    if (users[user]["walkChallengeHistory"] > 1) {
+      users[user]["walkChallengeHistory"] -= 1;
     }
   }
   return users;
@@ -75,20 +79,20 @@ const updateUserActivity = async (app, channelID) => {
   prevData.lastDate = await updateData(prevData.lastDate);
 
   await saveJSONFile(prevData);
-
-  return 0;
 };
 
-const updateParticipant = async (replyUsers, leaders) => {
+const updateParticipant = async (replyUsers, type) => {
   const data = await readJSONFile();
 
-  // TODO: 챌린지별 데이터 구분하고 기록
-  replyUsers.forEach((user) => {
-    data.users[user].challengeHistory += 1;
-    if (leaders.includes(user)) {
-      data.users[user].pastLeader = true;
-    }
-  });
+  if (type === "flower") {
+    replyUsers.forEach((user) => {
+      data.users[user].flowerChallengeHistory += 1;
+    });
+  } else {
+    replyUsers.forEach((user) => {
+      data.users[user].walkChallengeHistory += 1;
+    });
+  }
   await saveJSONFile(data);
 };
 

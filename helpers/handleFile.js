@@ -17,8 +17,9 @@ const saveJSONFile = async (data) => {
   try {
     await writeFile(filePath, JSON.stringify(data, null, 2), "utf8");
     return true;
-  } catch {
+  } catch (error) {
     console.error("JSON 파일 저장 에러: ", error);
+    return false;
   }
 };
 
