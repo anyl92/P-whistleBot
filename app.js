@@ -26,8 +26,8 @@ const app = new App({
   await findMessageInfo(app, CHANNER_ID, WALK_TEXT);
   await findMessageInfo(app, CHANNER_ID, FLOWER_TEXT);
 
-  app.logger.info("5초 후 프로그램 종료...");
+  app.logger.info("2초 후 프로그램 종료...");
   setTimeout(() => {
     process.exit(0);
-  }, 5000);
+  }, 2000);
 })();

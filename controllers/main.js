@@ -41,7 +41,7 @@ async function findMessageInfo(app, channelID, text) {
         const teamText = team.map((member, idx) => {
           if (idx === 0) {
             leaders.push(member[1]);
-            return `<*조장* <@${member[1]}>> `;
+            return `<*조장* <@${member[1]}>>`;
           }
           return `, <@${member[1]}>`;
         });
