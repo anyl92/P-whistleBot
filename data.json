@@ -1,108 +1,396 @@
 {
-  "lastDate": 1739521156.905,
+  "lastDate": 1739709671.913,
   "users": {
-    "U08CFJ7U21H": {
-      "enteredAt": "1739093422.361789",
-      "message": 60,
-      "replies": 6,
-      "reactions": 0,
-      "challengeHistory": 1,
+    "U07PV9BGY4R": {
+      "enteredAt": "1730256190.622879",
+      "messages": 73,
+      "replies": 234,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07NZLQLMK8": {
+      "enteredAt": "1730256313.399069",
+      "messages": 3,
+      "replies": 13,
+      "challengeHistory": 0,
       "pastLeader": false
     },
-    "U08C15LTLSK": {
-      "enteredAt": "1739093443.371179",
-      "message": 24,
+    "U07PV0JF516": {
+      "enteredAt": "1730256313.399069",
+      "messages": 29,
+      "replies": 73,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PK29MHTK": {
+      "enteredAt": "1730256588.526509",
+      "messages": 32,
+      "replies": 93,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07P7FVLWFP": {
+      "enteredAt": "1730256588.526509",
+      "messages": 7,
+      "replies": 118,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07PPCU9W5N": {
+      "enteredAt": "1730256588.526509",
+      "messages": 1,
+      "replies": 40,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PXD2JKCG": {
+      "enteredAt": "1730256588.526509",
+      "messages": 5,
+      "replies": 11,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P666GYNP": {
+      "enteredAt": "1730258220.643639",
+      "messages": 1,
+      "replies": 34,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07PK50HRA5": {
+      "enteredAt": "1730258220.643639",
+      "messages": 14,
+      "replies": 210,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07P3B5FVKP": {
+      "enteredAt": "1730258220.643639",
+      "messages": 24,
+      "replies": 62,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P4BPUA8M": {
+      "enteredAt": "1730278295.697539",
+      "messages": 2,
+      "replies": 83,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07NR02CHJR": {
+      "enteredAt": "1730278404.221359",
+      "messages": 10,
+      "replies": 37,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07PWQMV9H7": {
+      "enteredAt": "1730329438.591599",
+      "messages": 7,
+      "replies": 27,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P9HVAPMJ": {
+      "enteredAt": "1730425458.733329",
+      "messages": 10,
+      "replies": 2,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07NZSE6FJA": {
+      "enteredAt": "1730544534.018489",
+      "messages": 22,
+      "replies": 102,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P64S8KSN": {
+      "enteredAt": "1730942025.478299",
+      "messages": 5,
+      "replies": 26,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07P56RLY3F": {
+      "enteredAt": "1731155185.422879",
+      "messages": 33,
+      "replies": 95,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PNLCBB7T": {
+      "enteredAt": "1731572718.424079",
+      "messages": 50,
+      "replies": 241,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07P66H85DG": {
+      "enteredAt": "1731596657.036609",
+      "messages": 2,
+      "replies": 2,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P38X0SFP": {
+      "enteredAt": "1731627811.375649",
+      "messages": 7,
+      "replies": 27,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PEDM1W1H": {
+      "enteredAt": "1731627811.375649",
+      "messages": 6,
+      "replies": 24,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P325G9E0": {
+      "enteredAt": "1731756808.722689",
+      "messages": 1,
+      "replies": 11,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07NTP9MGH4": {
+      "enteredAt": "1731816032.832419",
+      "messages": 0,
+      "replies": 1,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P6KDD6P7": {
+      "enteredAt": "1732244183.622209",
+      "messages": 4,
+      "replies": 14,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07NRTQRUDV": {
+      "enteredAt": "1732371270.029089",
+      "messages": 4,
+      "replies": 24,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P67S46BD": {
+      "enteredAt": "1732417007.921739",
+      "messages": 3,
+      "replies": 10,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07NL2KV7B9": {
+      "enteredAt": "1732421777.191629",
+      "messages": 0,
+      "replies": 2,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PPCUNXC0": {
+      "enteredAt": "1732501108.349779",
+      "messages": 25,
+      "replies": 72,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PD9GG6MP": {
+      "enteredAt": "1732627717.538179",
+      "messages": 2,
+      "replies": 24,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P7GGFYP7": {
+      "enteredAt": "1732627717.538179",
+      "messages": 1,
+      "replies": 2,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PV8NM6KS": {
+      "enteredAt": "1732628083.751829",
+      "messages": 8,
+      "replies": 56,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07PCETUGG4": {
+      "enteredAt": "1732704718.462819",
+      "messages": 18,
+      "replies": 43,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P9HYNN59": {
+      "enteredAt": "1732888626.201899",
+      "messages": 4,
+      "replies": 7,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P3CBU45B": {
+      "enteredAt": "1733105825.634319",
+      "messages": 2,
+      "replies": 8,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "USLACKBOT": {
+      "enteredAt": "1733302606.565709",
+      "messages": 109,
       "replies": 12,
-      "reactions": 0,
-      "challengeHistory": 1,
-      "pastLeader": false
-    },
-    "U08CF7ACVP1": {
-      "enteredAt": "1739292730.713409",
-      "message": 12,
-      "replies": 3,
-      "reactions": 0,
-      "challengeHistory": 1,
-      "pastLeader": false
-    },
-    "U08CSTDLL8M": {
-      "enteredAt": "1739292730.713409",
-      "message": 0,
-      "replies": 3,
-      "reactions": 0,
       "challengeHistory": 0,
       "pastLeader": false
     },
-    "U08CVPK7S7M": {
-      "enteredAt": "1739292730.713409",
-      "message": 3,
-      "replies": 9,
-      "reactions": 0,
-      "challengeHistory": 0,
-      "pastLeader": false
-    },
-    "U08CT2HFBV3": {
-      "enteredAt": "1739292730.713409",
-      "message": 3,
-      "replies": 9,
-      "reactions": 0,
-      "challengeHistory": 0,
-      "pastLeader": false
-    },
-    "U08DK137D9N": {
-      "enteredAt": "1739292730.713409",
-      "message": 0,
-      "replies": 3,
-      "reactions": 0,
-      "challengeHistory": 0,
-      "pastLeader": false
-    },
-    "U08DJG6F6CQ": {
-      "enteredAt": "1739292730.713409",
-      "message": 6,
-      "replies": 3,
-      "reactions": 0,
-      "challengeHistory": 0,
-      "pastLeader": false
-    },
-    "U08D08B5BMJ": {
-      "enteredAt": "1739292730.713409",
-      "message": 0,
-      "replies": 3,
-      "reactions": 0,
-      "challengeHistory": 0,
-      "pastLeader": false
-    },
-    "U08CSRS1H53": {
-      "enteredAt": "1739319537.437209",
-      "message": 3,
+    "U07P7TBS813": {
+      "enteredAt": "1733399665.292749",
+      "messages": 1,
       "replies": 0,
-      "reactions": 0,
       "challengeHistory": 0,
       "pastLeader": false
     },
-    "U08DJFY5Z7A": {
-      "enteredAt": "1739319889.409159",
-      "message": 3,
-      "replies": 3,
-      "reactions": 0,
+    "U07P3PEPD61": {
+      "enteredAt": "1733409438.954689",
+      "messages": 12,
+      "replies": 67,
       "challengeHistory": 0,
       "pastLeader": false
     },
-    "U08DK34GS9E": {
-      "enteredAt": "1739329916.783449",
-      "message": 3,
-      "replies": 0,
-      "reactions": 0,
+    "U07P54MCU21": {
+      "enteredAt": "1734254342.478069",
+      "messages": 7,
+      "replies": 39,
       "challengeHistory": 0,
       "pastLeader": false
     },
-    "U08CUBV2HL1": {
-      "enteredAt": "1739372495.347509",
-      "message": 0,
+    "U07PK04N62D": {
+      "enteredAt": "1735017805.752299",
+      "messages": 5,
+      "replies": 8,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07NZP27UDU": {
+      "enteredAt": "1735038407.581949",
+      "messages": 2,
+      "replies": 8,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P6HKQCGK": {
+      "enteredAt": "1735133393.056569",
+      "messages": 9,
+      "replies": 42,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07P97CEPCL": {
+      "enteredAt": "1735133393.056569",
+      "messages": 0,
+      "replies": 24,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07PLRK48LC": {
+      "enteredAt": "1736035216.214509",
+      "messages": 16,
+      "replies": 45,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07P668EJUT": {
+      "enteredAt": "1736071198.140399",
+      "messages": 1,
       "replies": 6,
-      "reactions": 0,
       "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P6E45T0B": {
+      "enteredAt": "1736121656.380799",
+      "messages": 2,
+      "replies": 45,
+      "challengeHistory": 6,
+      "pastLeader": false
+    },
+    "U07P3E4D99T": {
+      "enteredAt": "1736160932.757939",
+      "messages": 1,
+      "replies": 21,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07P297JG15": {
+      "enteredAt": "1736208576.056429",
+      "messages": 0,
+      "replies": 2,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07NRLX5DGF": {
+      "enteredAt": "1737033405.108749",
+      "messages": 5,
+      "replies": 17,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PCMUDMGC": {
+      "enteredAt": "1737378602.899369",
+      "messages": 1,
+      "replies": 1,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PEB8CBQC": {
+      "enteredAt": "1737703860.928409",
+      "messages": 1,
+      "replies": 0,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PG9QNV98": {
+      "enteredAt": "1737724776.861339",
+      "messages": 8,
+      "replies": 26,
+      "challengeHistory": 6,
+      "pastLeader": true
+    },
+    "U07PF8JK2KX": {
+      "enteredAt": "1737725927.925259",
+      "messages": 3,
+      "replies": 8,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07PJ96V7NX": {
+      "enteredAt": "1737736792.133379",
+      "messages": 1,
+      "replies": 8,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07NS4DNPP1": {
+      "enteredAt": "1737774375.835729",
+      "messages": 5,
+      "replies": 5,
+      "challengeHistory": 0,
+      "pastLeader": false
+    },
+    "U07NSBXEXV5": {
+      "enteredAt": "1737798634.972479",
+      "messages": 3,
+      "replies": 11,
+      "challengeHistory": 6,
+      "pastLeader": false
+    },
+    "U07PPCTLLG0": {
+      "enteredAt": "1739665307.188669",
+      "messages": 1,
+      "replies": 2,
+      "challengeHistory": 6,
       "pastLeader": false
     }
   }

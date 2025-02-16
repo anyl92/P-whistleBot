@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 const filePath = path.join(__dirname, "../data.json");
 
-async function saveJsonFile(filePath, data) {
+export async function saveJsonFile(filePath, data) {
   try {
     await writeFile(filePath, JSON.stringify(data, null, 2), "utf8");
     console.log("JSON 파일 저장");
@@ -25,11 +25,11 @@ const updateActivity = async (prevData, conversationHistories) => {
 
     // 유저의 메시지 카운트
     if (userID in prevData.users) {
-      prevData.users[userID].message += 1;
+      prevData.users[userID].messages += 1;
     } else {
       prevData.users[userID] = {
         enteredAt: message.ts,
-        message: 1,
+        messages: 1,
         replies: 0,
         challengeHistory: 0,
         pastLeader: false,
@@ -45,7 +45,7 @@ const updateActivity = async (prevData, conversationHistories) => {
         } else {
           prevData.users[user] = {
             enteredAt: message.ts,
-            message: 0,
+            messages: 0,
             replies: 1,
             challengeHistory: 0,
             pastLeader: false,
@@ -82,6 +82,7 @@ async function updateUserActivity(app, channelID) {
     channel: channelID,
     oldest: prevData.lastDate,
     inclusive: false,
+    limit: 999,
   });
   const conversationHistories = JSON.parse(JSON.stringify(conversations));
   // console.dir(conversationHistories.messages, { depth: null });
@@ -90,7 +91,7 @@ async function updateUserActivity(app, channelID) {
   prevData.users = await updateHistory(prevData.users);
   prevData.lastDate = await updateData(prevData.lastDate);
 
-  await saveJsonFile(filePath, data);
+  await saveJsonFile(filePath, prevData);
 
   return 0;
 }
