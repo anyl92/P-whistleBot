@@ -1,20 +1,4 @@
-import { readFile, writeFile } from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const filePath = path.join(__dirname, "../data.json");
-
-export async function saveJsonFile(filePath, data) {
-  try {
-    await writeFile(filePath, JSON.stringify(data, null, 2), "utf8");
-    console.log("JSON 파일 저장");
-  } catch {
-    console.error("JSON 파일 저장 에러: ", error);
-  }
-}
+import { readJSONFile, saveJSONFile } from "../helpers/handleFile.js";
 
 const updateActivity = async (prevData, conversationHistories) => {
   for (const message of conversationHistories.messages.reverse()) {
@@ -74,9 +58,8 @@ const updateData = async (lastDate) => {
   return lastDate;
 };
 
-async function updateUserActivity(app, channelID) {
-  const fileData = await readFile(filePath, "utf8");
-  const prevData = JSON.parse(fileData);
+const updateUserActivity = async (app, channelID) => {
+  const prevData = await readJSONFile();
 
   const conversations = await app.client.conversations.history({
     channel: channelID,
@@ -91,9 +74,22 @@ async function updateUserActivity(app, channelID) {
   prevData.users = await updateHistory(prevData.users);
   prevData.lastDate = await updateData(prevData.lastDate);
 
-  await saveJsonFile(filePath, prevData);
+  await saveJSONFile(prevData);
 
   return 0;
-}
+};
 
-export { updateUserActivity };
+const updateParticipant = async (replyUsers, leaders) => {
+  const data = await readJSONFile();
+
+  // TODO: 챌린지별 데이터 구분하고 기록
+  replyUsers.forEach((user) => {
+    data.users[user].challengeHistory += 1;
+    if (leaders.includes(user)) {
+      data.users[user].pastLeader = true;
+    }
+  });
+  await saveJSONFile(data);
+};
+
+export { updateUserActivity, updateParticipant };

@@ -1,13 +1,5 @@
-import { readFile } from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const filePath = path.join(__dirname, "../data.json");
-
-const MAX_PEOPLE = 5;
+import { MAX_PEOPLE } from "../shared/constants.js";
+import { readJSONFile } from "./handleFile.js";
 
 const getRandomUsers = (users, max) => {
   for (let i = max; i > 0; i--) {
@@ -18,8 +10,7 @@ const getRandomUsers = (users, max) => {
 };
 
 const drawLeader = async (team) => {
-  const fileData = await readFile(filePath, "utf8");
-  const data = JSON.parse(fileData);
+  const data = await readJSONFile();
 
   const memberInfo = team.map((member) => {
     const { messages, replies, challengeHistory, pastLeader } = data.users[member];

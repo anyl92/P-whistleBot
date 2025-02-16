@@ -1,14 +1,5 @@
 import { makeTeams } from "../helpers/makeTeams.js";
-
-import { readFile, writeFile } from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
-import { saveJsonFile } from "./user.js";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const filePath = path.join(__dirname, "../data.json");
+import { updateParticipant } from "./user.js";
 
 async function findChannelId(app, name) {
   const conversationsList = await app.client.conversations.list({
@@ -60,17 +51,7 @@ async function findMessageInfo(app, channelID, text) {
       const type = message.text.includes("송이 심기") ? "flower" : "work";
       await replyMessage(app, channelID, messageTS, resultText, type);
 
-      // TODO:함수로 빼고 파일리드 임포트 모아서 할수있게 모듈화ㅏ
-      const fileData = await readFile(filePath, "utf8");
-      const data = JSON.parse(fileData);
-
-      replyUsers.forEach((user) => {
-        data.users[user].challengeHistory += 1;
-        if (leaders.includes(user)) {
-          data.users[user].pastLeader = true;
-        }
-      });
-      await saveJsonFile(filePath, data);
+      await updateParticipant(replyUsers, leaders);
 
       return messageTS;
     }
