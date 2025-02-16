@@ -1,17 +1,19 @@
 {
-  "lastDate": 1739738517.957,
+  "lastDate": 1739741684.877,
   "users": {
     "U07PV9BGY4R": {
       "enteredAt": "1730256190.622879",
       "messages": 73,
       "replies": 234,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 995,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07NZLQLMK8": {
       "enteredAt": "1730256313.399069",
       "messages": 3,
       "replies": 13,
+      "reactions": 95,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -19,27 +21,47 @@
       "enteredAt": "1730256313.399069",
       "messages": 29,
       "replies": 73,
+      "reactions": 246,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
+    },
+    "U07P666GYNP": {
+      "enteredAt": "1730256313.399069",
+      "messages": 1,
+      "replies": 34,
+      "reactions": 288,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
+    },
+    "U07PK50HRA5": {
+      "enteredAt": "1730256313.399069",
+      "messages": 14,
+      "replies": 210,
+      "reactions": 587,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07PK29MHTK": {
       "enteredAt": "1730256588.526509",
       "messages": 32,
       "replies": 93,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 112,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07P7FVLWFP": {
       "enteredAt": "1730256588.526509",
       "messages": 7,
       "replies": 118,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 437,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07PPCU9W5N": {
       "enteredAt": "1730256588.526509",
       "messages": 1,
       "replies": 40,
+      "reactions": 254,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -47,48 +69,39 @@
       "enteredAt": "1730256588.526509",
       "messages": 5,
       "replies": 11,
+      "reactions": 38,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
-    },
-    "U07P666GYNP": {
-      "enteredAt": "1730258220.643639",
-      "messages": 1,
-      "replies": 34,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
-    },
-    "U07PK50HRA5": {
-      "enteredAt": "1730258220.643639",
-      "messages": 14,
-      "replies": 210,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
     },
     "U07P3B5FVKP": {
       "enteredAt": "1730258220.643639",
       "messages": 24,
       "replies": 62,
+      "reactions": 295,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
     "U07P4BPUA8M": {
-      "enteredAt": "1730278295.697539",
+      "enteredAt": "1730258220.643639",
       "messages": 2,
       "replies": 85,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 549,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07NR02CHJR": {
       "enteredAt": "1730278404.221359",
       "messages": 10,
       "replies": 37,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 54,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07PWQMV9H7": {
       "enteredAt": "1730329438.591599",
       "messages": 7,
       "replies": 27,
+      "reactions": 212,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -96,6 +109,7 @@
       "enteredAt": "1730425458.733329",
       "messages": 10,
       "replies": 2,
+      "reactions": 21,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -103,41 +117,87 @@
       "enteredAt": "1730544534.018489",
       "messages": 22,
       "replies": 102,
+      "reactions": 250,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
     "U07P64S8KSN": {
-      "enteredAt": "1730942025.478299",
+      "enteredAt": "1730803536.170799",
       "messages": 5,
       "replies": 28,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 231,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
+    },
+    "U07PD99KBK3": {
+      "enteredAt": "1731120548.813389",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 9,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07NSQYMPE3": {
+      "enteredAt": "1731136293.179009",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 7,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
     },
     "U07P56RLY3F": {
       "enteredAt": "1731155185.422879",
       "messages": 33,
       "replies": 96,
-      "walkChallengeHistory": 2,
+      "reactions": 282,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 0
+    },
+    "U07P86LF4Q2": {
+      "enteredAt": "1731411598.688549",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 1,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07P66H85DG": {
+      "enteredAt": "1731471731.585959",
+      "messages": 2,
+      "replies": 2,
+      "reactions": 11,
+      "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
     "U07PNLCBB7T": {
-      "enteredAt": "1731572718.424079",
+      "enteredAt": "1731568671.961229",
       "messages": 50,
       "replies": 241,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 361,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
-    "U07P66H85DG": {
-      "enteredAt": "1731596657.036609",
-      "messages": 2,
-      "replies": 2,
+    "U07PGA0E9D1": {
+      "enteredAt": "1731572718.424079",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 1,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
+    },
+    "U07PV8NM6KS": {
+      "enteredAt": "1731576603.371619",
+      "messages": 8,
+      "replies": 56,
+      "reactions": 318,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07P38X0SFP": {
       "enteredAt": "1731627811.375649",
       "messages": 7,
       "replies": 27,
+      "reactions": 101,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -145,6 +205,7 @@
       "enteredAt": "1731627811.375649",
       "messages": 6,
       "replies": 24,
+      "reactions": 100,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -152,27 +213,55 @@
       "enteredAt": "1731756808.722689",
       "messages": 1,
       "replies": 11,
+      "reactions": 71,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
     "U07NTP9MGH4": {
-      "enteredAt": "1731816032.832419",
+      "enteredAt": "1731756808.722689",
       "messages": 0,
       "replies": 1,
+      "reactions": 5,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07PAR86Q2W": {
+      "enteredAt": "1732124852.254929",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 21,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07NL2KV7B9": {
+      "enteredAt": "1732231333.682809",
+      "messages": 0,
+      "replies": 2,
+      "reactions": 49,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
     "U07P6KDD6P7": {
-      "enteredAt": "1732244183.622209",
+      "enteredAt": "1732231333.682809",
       "messages": 4,
       "replies": 14,
+      "reactions": 16,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07PD9CD7ED": {
+      "enteredAt": "1732326658.629629",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 5,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
     "U07NRTQRUDV": {
-      "enteredAt": "1732371270.029089",
+      "enteredAt": "1732326658.629629",
       "messages": 4,
       "replies": 24,
+      "reactions": 132,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -180,13 +269,7 @@
       "enteredAt": "1732417007.921739",
       "messages": 3,
       "replies": 10,
-      "walkChallengeHistory": 0,
-      "flowerChallengeHistory": 0
-    },
-    "U07NL2KV7B9": {
-      "enteredAt": "1732421777.191629",
-      "messages": 0,
-      "replies": 2,
+      "reactions": 8,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -194,34 +277,39 @@
       "enteredAt": "1732501108.349779",
       "messages": 25,
       "replies": 72,
+      "reactions": 167,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
     "U07PD9GG6MP": {
-      "enteredAt": "1732627717.538179",
+      "enteredAt": "1732501108.349779",
       "messages": 2,
       "replies": 27,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 99,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07P7GGFYP7": {
       "enteredAt": "1732627717.538179",
       "messages": 1,
       "replies": 2,
+      "reactions": 11,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
-    "U07PV8NM6KS": {
-      "enteredAt": "1732628083.751829",
-      "messages": 8,
-      "replies": 56,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
-    },
     "U07PCETUGG4": {
-      "enteredAt": "1732704718.462819",
+      "enteredAt": "1732693201.234969",
       "messages": 18,
       "replies": 43,
+      "reactions": 435,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07NL2PGJT1": {
+      "enteredAt": "1732693484.141079",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 3,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -229,6 +317,7 @@
       "enteredAt": "1732888626.201899",
       "messages": 4,
       "replies": 7,
+      "reactions": 25,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -236,6 +325,7 @@
       "enteredAt": "1733105825.634319",
       "messages": 2,
       "replies": 8,
+      "reactions": 20,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -243,6 +333,15 @@
       "enteredAt": "1733302606.565709",
       "messages": 109,
       "replies": 12,
+      "reactions": 0,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07P3PEPD61": {
+      "enteredAt": "1733321382.827629",
+      "messages": 12,
+      "replies": 67,
+      "reactions": 310,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -250,13 +349,7 @@
       "enteredAt": "1733399665.292749",
       "messages": 1,
       "replies": 0,
-      "walkChallengeHistory": 0,
-      "flowerChallengeHistory": 0
-    },
-    "U07P3PEPD61": {
-      "enteredAt": "1733409438.954689",
-      "messages": 12,
-      "replies": 67,
+      "reactions": 0,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -264,13 +357,39 @@
       "enteredAt": "1734254342.478069",
       "messages": 7,
       "replies": 39,
+      "reactions": 200,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
+    },
+    "U07P297JG15": {
+      "enteredAt": "1734341546.040309",
+      "messages": 0,
+      "replies": 2,
+      "reactions": 100,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07P7TM1XQB": {
+      "enteredAt": "1734408607.657819",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 3,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07P97CEPCL": {
+      "enteredAt": "1734992516.428559",
+      "messages": 0,
+      "replies": 24,
+      "reactions": 223,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07PK04N62D": {
       "enteredAt": "1735017805.752299",
       "messages": 5,
       "replies": 8,
+      "reactions": 32,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -278,62 +397,71 @@
       "enteredAt": "1735038407.581949",
       "messages": 2,
       "replies": 8,
+      "reactions": 37,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07NZJZ9Y30": {
+      "enteredAt": "1735043957.057449",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 2,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
     "U07P6HKQCGK": {
-      "enteredAt": "1735133393.056569",
+      "enteredAt": "1735099842.070099",
       "messages": 9,
       "replies": 42,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
-    },
-    "U07P97CEPCL": {
-      "enteredAt": "1735133393.056569",
-      "messages": 0,
-      "replies": 24,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 149,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07PLRK48LC": {
-      "enteredAt": "1736035216.214509",
+      "enteredAt": "1735690058.990329",
       "messages": 16,
       "replies": 45,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 363,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
+    },
+    "U07P3E4D99T": {
+      "enteredAt": "1735690058.990329",
+      "messages": 1,
+      "replies": 21,
+      "reactions": 173,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
     },
     "U07P668EJUT": {
       "enteredAt": "1736071198.140399",
       "messages": 1,
       "replies": 6,
+      "reactions": 24,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
+    },
+    "U07PG9QNV98": {
+      "enteredAt": "1736074257.584599",
+      "messages": 8,
+      "replies": 26,
+      "reactions": 27,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07P6E45T0B": {
       "enteredAt": "1736121656.380799",
       "messages": 2,
       "replies": 45,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
-    },
-    "U07P3E4D99T": {
-      "enteredAt": "1736160932.757939",
-      "messages": 1,
-      "replies": 21,
-      "walkChallengeHistory": 0,
-      "flowerChallengeHistory": 0
-    },
-    "U07P297JG15": {
-      "enteredAt": "1736208576.056429",
-      "messages": 0,
-      "replies": 2,
-      "walkChallengeHistory": 0,
-      "flowerChallengeHistory": 0
+      "reactions": 158,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07NRLX5DGF": {
-      "enteredAt": "1737033405.108749",
+      "enteredAt": "1736769747.502459",
       "messages": 5,
       "replies": 17,
+      "reactions": 57,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -341,41 +469,39 @@
       "enteredAt": "1737378602.899369",
       "messages": 1,
       "replies": 1,
+      "reactions": 0,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
+    },
+    "U07PJ96V7NX": {
+      "enteredAt": "1737445261.038109",
+      "messages": 1,
+      "replies": 10,
+      "reactions": 12,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     },
     "U07PEB8CBQC": {
       "enteredAt": "1737703860.928409",
       "messages": 1,
       "replies": 0,
+      "reactions": 0,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
-    },
-    "U07PG9QNV98": {
-      "enteredAt": "1737724776.861339",
-      "messages": 8,
-      "replies": 26,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
     },
     "U07PF8JK2KX": {
       "enteredAt": "1737725927.925259",
       "messages": 3,
       "replies": 8,
+      "reactions": 16,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
-    },
-    "U07PJ96V7NX": {
-      "enteredAt": "1737736792.133379",
-      "messages": 1,
-      "replies": 10,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
     },
     "U07NS4DNPP1": {
       "enteredAt": "1737774375.835729",
       "messages": 5,
       "replies": 5,
+      "reactions": 30,
       "walkChallengeHistory": 0,
       "flowerChallengeHistory": 0
     },
@@ -383,15 +509,41 @@
       "enteredAt": "1737798634.972479",
       "messages": 3,
       "replies": 11,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 29,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
+    },
+    "U07P62J6151": {
+      "enteredAt": "1738403648.568519",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 8,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07PVDX3LF2": {
+      "enteredAt": "1738471954.259439",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 4,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
+    },
+    "U07PWKJPTTJ": {
+      "enteredAt": "1738581342.228919",
+      "messages": 0,
+      "replies": 0,
+      "reactions": 1,
+      "walkChallengeHistory": 0,
+      "flowerChallengeHistory": 0
     },
     "U07PPCTLLG0": {
       "enteredAt": "1739665307.188669",
       "messages": 1,
       "replies": 2,
-      "walkChallengeHistory": 2,
-      "flowerChallengeHistory": 2
+      "reactions": 4,
+      "walkChallengeHistory": 1,
+      "flowerChallengeHistory": 1
     }
   }
 }

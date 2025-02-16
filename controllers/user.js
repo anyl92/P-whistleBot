@@ -7,7 +7,7 @@ const updateActivity = async (prevData, conversationHistories) => {
     }
     const userID = message.user;
 
-    // 유저의 메시지 카운트
+    // 유저 메시지 카운트
     if (userID in prevData.users) {
       prevData.users[userID].messages += 1;
     } else {
@@ -15,12 +15,12 @@ const updateActivity = async (prevData, conversationHistories) => {
         enteredAt: message.ts,
         messages: 1,
         replies: 0,
+        reactions: 0,
         walkChallengeHistory: 0,
         flowerChallengeHistory: 0,
       };
     }
-
-    // 유저의 리플 카운트
+    // 유저 리플 카운트
     if (message.reply_users_count > 0) {
       message.reply_users.forEach((user) => {
         if (user === userID) return;
@@ -31,10 +31,31 @@ const updateActivity = async (prevData, conversationHistories) => {
             enteredAt: message.ts,
             messages: 0,
             replies: 1,
+            reactions: 0,
             walkChallengeHistory: 0,
             flowerChallengeHistory: 0,
           };
         }
+      });
+    }
+    // 유저 리액션 카운트
+    if (message.reactions) {
+      message.reactions.forEach((reaction) => {
+        reaction.users.forEach((user) => {
+          if (user === userID) return;
+          if (user in prevData.users) {
+            prevData.users[user].reactions += 1;
+          } else {
+            prevData.users[user] = {
+              enteredAt: message.ts,
+              messages: 0,
+              replies: 0,
+              reactions: 1,
+              walkChallengeHistory: 0,
+              flowerChallengeHistory: 0,
+            };
+          }
+        });
       });
     }
   }
@@ -42,7 +63,7 @@ const updateActivity = async (prevData, conversationHistories) => {
 };
 
 const updateHistory = async (users) => {
-  // 과거 참여이력을 빼주는 작업
+  // 과거 참여이력 빼기
   for (const user in users) {
     if (users[user]["flowerChallengeHistory"] > 1) {
       users[user]["flowerChallengeHistory"] -= 1;
@@ -82,6 +103,7 @@ const updateUserActivity = async (app, channelID) => {
 };
 
 const updateParticipant = async (replyUsers, type) => {
+  // 이번 참여이력 더하기
   const data = await readJSONFile();
 
   if (type === "flower") {
