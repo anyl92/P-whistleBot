@@ -13,10 +13,10 @@ const drawLeader = async (team, type) => {
   const data = await readJSONFile();
 
   const memberInfo = team.map((member) => {
-    const { messages, replies, flowerChallengeHistory, walkChallengeHistory } = data.users[member];
+    const { messages, replies, reactions, flowerChallengeHistory, walkChallengeHistory } = data.users[member];
     const challengeHistory = type === "flower" ? flowerChallengeHistory : walkChallengeHistory;
 
-    const score = messages + replies + challengeHistory;
+    const score = messages + replies + reactions + challengeHistory;
     return [score, member];
   });
 
