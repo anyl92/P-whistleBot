@@ -1,6 +1,6 @@
 import { readJSONFile, saveJSONFile } from "../helpers/handleFile.js";
 
-const updateActivity = async (prevData, conversationHistories) => {
+const updateActivities = async (prevData, conversationHistories) => {
   for (const message of conversationHistories.messages.reverse()) {
     if (message.text.includes("님이 채널에 참여함")) {
       continue;
@@ -83,19 +83,18 @@ const updateData = async (lastDate) => {
   return lastDate;
 };
 
-const updateUserActivity = async (app, channelID) => {
+const updateUserData = async (app, channelID) => {
   const prevData = await readJSONFile();
-
-  const conversations = await app.client.conversations.history({
+  const conversationList = await app.client.conversations.history({
     channel: channelID,
     oldest: prevData.lastDate,
     inclusive: false,
     limit: 999,
   });
-  const conversationHistories = JSON.parse(JSON.stringify(conversations));
+  const conversationHistories = JSON.parse(JSON.stringify(conversationList));
   // console.dir(conversationHistories.messages, { depth: null });
 
-  prevData.users = await updateActivity(prevData, conversationHistories);
+  prevData.users = await updateActivities(prevData, conversationHistories);
   prevData.users = await updateHistory(prevData.users);
   prevData.lastDate = await updateData(prevData.lastDate);
 
@@ -118,4 +117,4 @@ const updateParticipant = async (replyUsers, type) => {
   await saveJSONFile(data);
 };
 
-export { updateUserActivity, updateParticipant };
+export { updateUserData, updateParticipant };

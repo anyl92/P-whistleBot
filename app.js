@@ -3,8 +3,8 @@ import dotenv from "dotenv";
 const { App } = pkg;
 dotenv.config();
 
-import { findChannelId, findMessageInfo } from "./controllers/main.js";
-import { updateUserActivity } from "./controllers/user.js";
+import { findChannelID, findMessageInfo } from "./controllers/main.js";
+import { updateUserData } from "./controllers/user.js";
 import { CHANNER_NAME, FLOWER_TEXT, WALK_TEXT } from "./shared/constants.js";
 
 const app = new App({
@@ -19,9 +19,9 @@ const app = new App({
   await app.start(process.env.PORT || 3000);
   app.logger.info("⚡️ Bolt app is running!");
 
-  const CHANNER_ID = await findChannelId(app, CHANNER_NAME);
+  const CHANNER_ID = await findChannelID(app, CHANNER_NAME);
 
-  await updateUserActivity(app, CHANNER_ID);
+  await updateUserData(app, CHANNER_ID);
 
   await findMessageInfo(app, CHANNER_ID, WALK_TEXT);
   await findMessageInfo(app, CHANNER_ID, FLOWER_TEXT);
