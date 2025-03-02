@@ -65,12 +65,12 @@ const updateActivities = async (prevData, conversationHistories) => {
 const updateHistory = async (users) => {
   // 과거 참여이력 빼기
   for (const user in users) {
-    if (users[user]["flowerChallengeHistory"] > 1) {
-      users[user]["flowerChallengeHistory"] -= 1;
+    if (users[user]["flowerChallengeHistory"] > 100) {
+      users[user]["flowerChallengeHistory"] -= 100;
     }
 
-    if (users[user]["walkChallengeHistory"] > 1) {
-      users[user]["walkChallengeHistory"] -= 1;
+    if (users[user]["walkChallengeHistory"] > 100) {
+      users[user]["walkChallengeHistory"] -= 100;
     }
   }
   return users;
@@ -107,11 +107,11 @@ const updateParticipant = async (replyUsers, type) => {
 
   if (type === "flower") {
     replyUsers.forEach((user) => {
-      data.users[user].flowerChallengeHistory += 1;
+      data.users[user].flowerChallengeHistory += 100;
     });
   } else {
     replyUsers.forEach((user) => {
-      data.users[user].walkChallengeHistory += 1;
+      data.users[user].walkChallengeHistory += 100;
     });
   }
   await saveJSONFile(data);

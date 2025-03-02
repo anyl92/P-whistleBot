@@ -26,8 +26,7 @@ const drawLeader = async (team, type) => {
   memberInfo.forEach((member) => {
     memberLength++;
   });
-  const median = memberLength < 4 ? memberInfo[memberLength - 1][0] : memberInfo[2][0];
-
+  const median = memberLength === 5 ? memberInfo[2][0] : memberLength === 4 ? memberInfo[1][0] : memberInfo[0][0];
   const candidates = [];
   let candidatesCount = 0;
   for (let i = 0; i < MAX_PEOPLE; i++) {
