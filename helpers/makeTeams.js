@@ -13,10 +13,11 @@ const drawLeader = async (team, type) => {
   const data = await readJSONFile();
 
   const memberInfo = team.map((member) => {
-    const { messages, replies, reactions, flowerChallengeHistory, walkChallengeHistory } = data.users[member];
+    const { messages, replies, reactions, walkChallengeHistory, flowerChallengeHistory, prevLeader } = data.users[member];
     const challengeHistory = type === "flower" ? flowerChallengeHistory : walkChallengeHistory;
 
-    const score = messages + replies + reactions + challengeHistory;
+    // 이전 leader는 한 턴 쉬어갈 수 있게 점수 0으로 랜덤매칭에서 빠질 가능성을 높임
+    const score = prevLeader ? 0 : messages + replies + reactions + challengeHistory;
     return [score, member];
   });
 
@@ -26,8 +27,7 @@ const drawLeader = async (team, type) => {
   memberInfo.forEach((member) => {
     memberLength++;
   });
-  const median = memberLength < 4 ? memberInfo[memberLength - 1][0] : memberInfo[2][0];
-
+  const median = memberLength === 5 ? memberInfo[2][0] : memberLength === 4 ? memberInfo[1][0] : memberInfo[0][0];
   const candidates = [];
   let candidatesCount = 0;
   for (let i = 0; i < MAX_PEOPLE; i++) {
@@ -46,10 +46,21 @@ const drawLeader = async (team, type) => {
   return result;
 };
 
-export const makeTeams = async (replyUsersCount, replyUsers, type) => {
-  const randomReplyUsers = getRandomUsers(replyUsers, replyUsersCount - 1);
+export const makeTeams = async (replyUsers, type) => {
+  // @U07PCU8REG2
+  const customTeam = [[0, "U07PCU8REG2"]];
+  if (replyUsers.indexOf("U07PCU8REG2") > -1) {
+    replyUsers.splice(replyUsers.indexOf("U07PCU8REG2"), 1);
 
-  const teamCount = Math.ceil(replyUsersCount / MAX_PEOPLE);
+    const threePerson = getRandomUsers(replyUsers, replyUsers.length - 1).slice(0, 3);
+    threePerson.forEach((person, idx) => {
+      replyUsers.splice(replyUsers.indexOf(person), 1);
+      customTeam.push([idx, person]);
+    });
+  }
+
+  const randomReplyUsers = getRandomUsers(replyUsers, replyUsers.length - 1);
+  const teamCount = Math.ceil(replyUsers.length / MAX_PEOPLE);
   const teamMembers = Array.from(Array(teamCount), () => Array(MAX_PEOPLE));
 
   let i = 0;
@@ -63,6 +74,10 @@ export const makeTeams = async (replyUsersCount, replyUsers, type) => {
     teamMembers[i][j] = user;
     i++;
   });
+
   const finalTeams = await Promise.all(teamMembers.map((team) => drawLeader(team, type)));
+  if (customTeam.length > 1) {
+    finalTeams.push(customTeam);
+  }
   return finalTeams;
 };

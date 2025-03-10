@@ -3,6 +3,7 @@ import { readJSONFile, saveJSONFile } from "../helpers/handleFile.js";
 const updateActivities = async (prevData, conversationHistories) => {
   for (const message of conversationHistories.messages.reverse()) {
     if (message.text.includes("님이 채널에 참여함")) {
+      // 채널 참여 텍스트는 전체가 전송되지 않아 정확하지 않음
       continue;
     }
     const userID = message.user;
@@ -18,6 +19,7 @@ const updateActivities = async (prevData, conversationHistories) => {
         reactions: 0,
         walkChallengeHistory: 0,
         flowerChallengeHistory: 0,
+        prevLeader: 0,
       };
     }
     // 유저 리플 카운트
@@ -34,6 +36,7 @@ const updateActivities = async (prevData, conversationHistories) => {
             reactions: 0,
             walkChallengeHistory: 0,
             flowerChallengeHistory: 0,
+            prevLeader: 0,
           };
         }
       });
@@ -53,6 +56,7 @@ const updateActivities = async (prevData, conversationHistories) => {
               reactions: 1,
               walkChallengeHistory: 0,
               flowerChallengeHistory: 0,
+              prevLeader: 0,
             };
           }
         });
@@ -63,14 +67,14 @@ const updateActivities = async (prevData, conversationHistories) => {
 };
 
 const updateHistory = async (users) => {
-  // 과거 참여이력 빼기
+  // 과거 참여이력 빼기: 챌린지 시작 전 수행
   for (const user in users) {
-    if (users[user]["flowerChallengeHistory"] > 1) {
-      users[user]["flowerChallengeHistory"] -= 1;
+    if (users[user]["flowerChallengeHistory"] > 100) {
+      users[user]["flowerChallengeHistory"] -= 100;
     }
 
-    if (users[user]["walkChallengeHistory"] > 1) {
-      users[user]["walkChallengeHistory"] -= 1;
+    if (users[user]["walkChallengeHistory"] > 100) {
+      users[user]["walkChallengeHistory"] -= 100;
     }
   }
   return users;
@@ -88,7 +92,7 @@ const updateUserData = async (app, channelID) => {
   const conversationList = await app.client.conversations.history({
     channel: channelID,
     oldest: prevData.lastDate,
-    inclusive: false,
+    inclusive: true,
     limit: 999,
   });
   const conversationHistories = JSON.parse(JSON.stringify(conversationList));
@@ -101,20 +105,38 @@ const updateUserData = async (app, channelID) => {
   await saveJSONFile(prevData);
 };
 
-const updateParticipant = async (replyUsers, type) => {
-  // 이번 참여이력 더하기
+const updateParticipant = async (replyUsers, type, leaders) => {
+  // 이번 참여, 리더 이력 더하기
   const data = await readJSONFile();
-
   if (type === "flower") {
     replyUsers.forEach((user) => {
-      data.users[user].flowerChallengeHistory += 1;
+      data.users[user].flowerChallengeHistory += 100;
+      if (leaders.includes(user)) {
+        data.users[user].prevLeader = 1;
+      }
     });
   } else {
     replyUsers.forEach((user) => {
-      data.users[user].walkChallengeHistory += 1;
+      data.users[user].walkChallengeHistory += 100;
+      if (leaders.includes(user)) {
+        data.users[user].prevLeader = 1;
+      }
     });
   }
   await saveJSONFile(data);
 };
 
-export { updateUserData, updateParticipant };
+const removeLeadersData = async (leaders) => {
+  // 과거 리더 이력 빼기: 두 챌린지 모두 끝난 후 수행
+  const data = await readJSONFile();
+
+  for (let user of Object.keys(data.users)) {
+    if (leaders.includes(user)) {
+      continue;
+    }
+    data.users[user].prevLeader = 0;
+  }
+  await saveJSONFile(data);
+};
+
+export { updateUserData, updateParticipant, removeLeadersData };

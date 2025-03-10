@@ -3,8 +3,8 @@ import dotenv from "dotenv";
 const { App } = pkg;
 dotenv.config();
 
-import { findChannelID, findMessageInfo } from "./controllers/main.js";
-import { updateUserData } from "./controllers/user.js";
+import { findChannelID, settingChallenge } from "./controllers/main.js";
+import { removeLeadersData, updateUserData } from "./controllers/user.js";
 import { CHANNER_NAME, FLOWER_TEXT, WALK_TEXT } from "./shared/constants.js";
 
 const app = new App({
@@ -23,8 +23,11 @@ const app = new App({
 
   await updateUserData(app, CHANNER_ID);
 
-  await findMessageInfo(app, CHANNER_ID, WALK_TEXT);
-  await findMessageInfo(app, CHANNER_ID, FLOWER_TEXT);
+  const walkLeaders = await settingChallenge(app, CHANNER_ID, WALK_TEXT);
+  const flowerLeaders = await settingChallenge(app, CHANNER_ID, FLOWER_TEXT);
+
+  const leaders = walkLeaders.concat(flowerLeaders);
+  await removeLeadersData(leaders);
 
   app.logger.info("2초 후 프로그램 종료...");
   setTimeout(() => {
