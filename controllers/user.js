@@ -3,6 +3,7 @@ import { readJSONFile, saveJSONFile } from "../helpers/handleFile.js";
 const updateActivities = async (prevData, conversationHistories) => {
   for (const message of conversationHistories.messages.reverse()) {
     if (message.text.includes("님이 채널에 참여함")) {
+      // 채널 참여 텍스트는 전체가 전송되지 않아 정확하지 않음
       continue;
     }
     const userID = message.user;
@@ -88,7 +89,7 @@ const updateUserData = async (app, channelID) => {
   const conversationList = await app.client.conversations.history({
     channel: channelID,
     oldest: prevData.lastDate,
-    inclusive: false,
+    inclusive: true,
     limit: 999,
   });
   const conversationHistories = JSON.parse(JSON.stringify(conversationList));

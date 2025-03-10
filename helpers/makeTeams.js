@@ -45,10 +45,21 @@ const drawLeader = async (team, type) => {
   return result;
 };
 
-export const makeTeams = async (replyUsersCount, replyUsers, type) => {
-  const randomReplyUsers = getRandomUsers(replyUsers, replyUsersCount - 1);
+export const makeTeams = async (replyUsers, type) => {
+  // @U07PCU8REG2
+  const customTeam = [[0, "U07PCU8REG2"]];
+  if (replyUsers.indexOf("U07PCU8REG2") > -1) {
+    replyUsers.splice(replyUsers.indexOf("U07PCU8REG2"), 1);
 
-  const teamCount = Math.ceil(replyUsersCount / MAX_PEOPLE);
+    const threePerson = getRandomUsers(replyUsers, replyUsers.length - 1).slice(0, 3);
+    threePerson.forEach((person, idx) => {
+      replyUsers.splice(replyUsers.indexOf(person), 1);
+      customTeam.push([idx, person]);
+    });
+  }
+
+  const randomReplyUsers = getRandomUsers(replyUsers, replyUsers.length - 1);
+  const teamCount = Math.ceil(replyUsers.length / MAX_PEOPLE);
   const teamMembers = Array.from(Array(teamCount), () => Array(MAX_PEOPLE));
 
   let i = 0;
@@ -62,6 +73,10 @@ export const makeTeams = async (replyUsersCount, replyUsers, type) => {
     teamMembers[i][j] = user;
     i++;
   });
+
   const finalTeams = await Promise.all(teamMembers.map((team) => drawLeader(team, type)));
+  if (customTeam.length > 1) {
+    finalTeams.push(customTeam);
+  }
   return finalTeams;
 };
