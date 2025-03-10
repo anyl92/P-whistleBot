@@ -16,7 +16,7 @@ const findChannelID = async (app, name) => {
   return channelID;
 };
 
-const findMessageInfo = async (app, channelID, text) => {
+const settingChallenge = async (app, channelID, text) => {
   // 봇이 동작할 시점에서 24시간 이내의 메시지만 조회
   const oneDayAgoTS = (Date.now() - 24 * 60 * 60 * 1000) / 1000;
   const conversationList = await app.client.conversations.history({
@@ -48,10 +48,10 @@ const findMessageInfo = async (app, channelID, text) => {
         return `${idx + 1}조: ${teamText.join("")}`;
       });
 
-      await replyMessage(app, channelID, messageTS, resultText, type);
       await updateParticipant(replyUsers, type, leaders);
+      await replyMessage(app, channelID, messageTS, resultText, type);
 
-      return messageTS;
+      return leaders;
     }
   }
 };
@@ -75,4 +75,4 @@ const replyMessage = async (app, channelID, messageTS, teamResult, type) => {
   }
 };
 
-export { findChannelID, findMessageInfo };
+export { findChannelID, settingChallenge };

@@ -13,10 +13,11 @@ const drawLeader = async (team, type) => {
   const data = await readJSONFile();
 
   const memberInfo = team.map((member) => {
-    const { messages, replies, reactions, flowerChallengeHistory, walkChallengeHistory } = data.users[member];
+    const { messages, replies, reactions, walkChallengeHistory, flowerChallengeHistory, prevLeader } = data.users[member];
     const challengeHistory = type === "flower" ? flowerChallengeHistory : walkChallengeHistory;
 
-    const score = messages + replies + reactions + challengeHistory;
+    // 이전 leader는 한 턴 쉬어갈 수 있게 점수 0으로 랜덤매칭에서 빠질 가능성을 높임
+    const score = prevLeader ? 0 : messages + replies + reactions + challengeHistory;
     return [score, member];
   });
 
